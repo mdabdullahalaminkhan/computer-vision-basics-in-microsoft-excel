@@ -12,7 +12,7 @@ Figure 1:  Outline of the steps to visualize a spreadsheet as an image.  The spr
 
 ## Selected Feedback Quotes
 
->"Its amazing to see an image show up on the Excel sheet as you zoom out and numbers appear as you zoom back in."
+>"It's amazing to see an image show up on the Excel sheet as you zoom out and numbers appear as you zoom back in."
 
 >"Very cool to see that with 'simple' Excel formulas you can do some real computer vision."
 
@@ -42,7 +42,7 @@ We will also see how to find edges and lines:
 
 No prior background in Computer Vision should be needed to follow the material.  It is assumed that the audience knows Microsoft Excel basics and can read its documentation, or search online for interpreting the formulas used.  [Exceljet](https://exceljet.net/) is a great resource for the latter.
 
-Some mathematical understanding would be needed:  Those who won't know what weighted average is won't be able to follow much.  Understanding of partial derivatives would be helpful but not required.  Most complex mathematical concept used is [eigenvalues](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors), but again the readers should be able to follow even if they do not know or remember the same.
+Some mathematical understanding would be needed:  Those who won't know what weighted average is won't be able to follow much.  Understanding of partial derivatives would be helpful but not required. The most complex mathematical concept used is [eigenvalues](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors), but again the readers should be able to follow even if they do not know or remember the same.
 
 ## Instructions
 
@@ -56,7 +56,7 @@ The work was created using Excel 2016 on Windows; it should however open in othe
 
 While the files open in [LibreOffice](https://www.documentfoundation.org/) (tested in version 6.4.0.3 (x64)), it is slow to the level of being unusable, even when using native LibreOffice Calc file format.  (See Hacker News discussion on this [here](https://news.ycombinator.com/item?id=22357374).)  We have not tested in [Apache OpenOffice](https://www.openoffice.org/).
 
-On quick testing, it seems to work fine in [WPS Office](https://en.wikipedia.org/wiki/WPS_Office) (tried on Windows 10).
+In quick testing, it seems to work fine in [WPS Office](https://en.wikipedia.org/wiki/WPS_Office) (tried on Windows 10).
 
 ### Relevant Excel Formula Options
 
@@ -103,7 +103,7 @@ Note that the Face Detection parameters used in the Excel files would likely fai
 
 ### Q2:  Are the techniques presented still relevant, or are they replaced by deep neural networks?
 
-The techniques are still relevant.  Neural networks are taking over for all complex computer vision problems, especially those unsolved by the classical techniques.  For simpler operations, the classical solutions are faster to put together and are usually computationally more efficient.  Also, classical techniques are still the default choice for edge devices (smartphones, web clients) though modern techniques are making an entry notably via hardware acceleration (e.g., [1](https://petewarden.com/2018/06/11/why-the-future-of-machine-learning-is-tiny/), [2](https://petewarden.com/2019/04/14/what-machine-learning-needs-from-hardware/)).
+The techniques are still relevant.  Neural networks are taking over for many complex computer vision problems, especially those unsolved by the classical techniques.  For simpler operations, the classical solutions are faster to put together and are usually computationally more efficient.  Also, classical techniques are still the default choice for edge devices (smartphones, web clients) though modern techniques are making an entry notably via hardware acceleration (e.g., [1](https://petewarden.com/2018/06/11/why-the-future-of-machine-learning-is-tiny/), [2](https://petewarden.com/2019/04/14/what-machine-learning-needs-from-hardware/)).
 
 ### Q3:  Why was the green channel of the image used, and not red or blue?  How can I represent color images in Excel in this fashion?
 
@@ -119,7 +119,7 @@ One way of representing color images in Excel is referenced in the answer to the
 
 We demonstrated the core concept of [a popular face detection algorithm](https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework) using just three [Haar-like features](https://en.wikipedia.org/wiki/Haar-like_feature) and two stages, which were hand-crafted to detect the face of Mona Lisa in that specific image.  The actual features as well as the stages are in practice calculated using Machine Learning, which commonly results in a few thousands of such features, as well as over ten stages.  Then the system is able to detect over 99% of the nearly frontal looking faces (while a separate pre-trained model is available for faces looking nearly sideways in [OpenCV](https://en.wikipedia.org/wiki/OpenCV)).
 
-The face shadow on the right would still be missed by the algorithm since such face images are not included in the training data.  My educated guess further will be that to detect such shadowed faces, the algorithm described would not do a good job, and using neural networks would be recommended.  Likewise, the algorithm we demonstrated is outperformed by a neural networks for "[Labeled faces in the wild](http://vis-www.cs.umass.edu/lfw/)" dataset where faces are often partially occluded too.
+The face shadow on the right would still be missed by the algorithm since such face images are not included in the training data.  My educated guess further will be that to detect such shadowed faces, the algorithm described would not do a good job, and using neural networks would be recommended.  Likewise, the algorithm we demonstrated is outperformed by neural networks for "[Labeled faces in the wild](http://vis-www.cs.umass.edu/lfw/)" dataset where faces are often partially occluded too.
 
 ### Q5:  In the OCR example, how did you choose the mask and its orientation?
 
@@ -174,7 +174,7 @@ While Excel has not been designed for this, it has been designed well to have wo
 
 ### Q10:  Does Excel have built-in formulas for Computer Vision?!
 
-No, we believe.  On the very least, this work is not using any of them.  :-)
+No, we believe. At the very least, this work is not using any of them.  :-)
 
 As noted above, even the rectangles and lines used for annotations are drawn using generic formulas, i.e., not using any potential special formulas available in Excel add-ins.
 
